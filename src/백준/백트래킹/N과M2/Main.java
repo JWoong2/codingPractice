@@ -1,4 +1,4 @@
-package 백준.백트래킹.N과M;
+package 백준.백트래킹.N과M2;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -12,7 +12,6 @@ public class Main {
 	static int M;
 	static StringBuilder sb = new StringBuilder();
 	
-	
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer st = new StringTokenizer(br.readLine());
@@ -23,11 +22,11 @@ public class Main {
 		
 		visited = new boolean[N];
 		arr = new int[M];
-		dfs(0);
+		dfs(0, 0);
 		System.out.println(sb);
 	}
 	
-	public static void dfs(int depth) {
+	public static void dfs(int index, int depth) {
 		if(depth == M) {
 			for(int val : arr) {
 				sb.append(val).append(' ');
@@ -36,15 +35,14 @@ public class Main {
 			return ;
 		}
 		
-		for(int i=0; i< N; i++) {
+		for(int i=index; i< N; i++) {
 			if(visited[i] == false) {
 				visited[i] = true;
 				arr[depth] = i + 1;
-				dfs(depth + 1);
+				dfs(i+1 , depth + 1);
 				visited[i] = false;
 			}
 		}
 		return ;
 	}
-	
 }
