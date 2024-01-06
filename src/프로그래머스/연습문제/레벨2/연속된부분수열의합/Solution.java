@@ -28,7 +28,7 @@ public class Solution {
         	}else if( sum > k) {
         		sum -= sequence[st++];
         	}else {
-        		System.out.println(st + " " + ed);
+//        		System.out.println(st + " " + ed);
         		
         		if(ed-st < min) {
         			min = ed-st;

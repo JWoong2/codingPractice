@@ -12,7 +12,6 @@ class Solution {
         int answer = 0;
         
         // init
-        for(int i=0; i<)
         
         return answer;
     }

@@ -12,6 +12,7 @@ class Solution {
 		int[] topping2 = { 1, 2, 3, 1, 4 };
 
 		System.out.println(solution(topping));
+		System.out.println(solution(topping2));
 	}
 
 	public static int solution(int[] topping) {
